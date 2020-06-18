@@ -15,8 +15,9 @@ namespace EnemyAPI.Tests
 
         public override void Start()
         {
-            Hooks.Init(); // Make sure to init both hooks
-            Tools.Init(); // and tools!
+            Hooks.Init(); // Calling this makes a hook that is responsible for actually changing enemy behaviors when they spawn.
+            Tools.Init(); // Calling this adds all of the classes that extend OverrideBehavior to a list, so that they can actually be used.
+                          // Both methods are required to be called for the API to work.
 
             Tools.ManualAddOB(typeof(TestOverrideBehavior)); // You WON'T need to use this line when you get it yourself. The OverrideBehaviors in your assembly should automatically load in.
         }
