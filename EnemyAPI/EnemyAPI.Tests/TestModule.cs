@@ -18,7 +18,7 @@ namespace EnemyAPI.Tests
             Hooks.Init(); // Make sure to init both hooks
             Tools.Init(); // and tools!
 
-            Tools.ManualAddOB(typeof(TestOverrideBehavior));
+            Tools.ManualAddOB(typeof(TestOverrideBehavior)); // You WON'T need to use this line when you get it yourself. The OverrideBehaviors in your assembly should automatically load in.
         }
     }
 
